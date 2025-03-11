@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <h1>Expense Tracker</h1>
+    </header>
+
+    <section id="add-expense">
+        <h2>Add Expense</h2>
+        <form id="add-expense-form">
+            <label for="date">Date:</label>
+            <input type="date" id="date" required>
+            <br><br>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required>
+            <br><br>
+            <label for="category">Category:</label>
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
+            </select>
+            <br><br>
+            <label for="description">Description:</label>
+            <textarea id="description" rows="4" cols="50"></textarea>
+            <br><br>
+            <button id="add-expense-btn">Add Expense</button>
+        </form>
+    </section>
+
+    <section id="expense-list">
+        <h2>Expense List</h2>
+        <ul id="expense-list-ul"></ul>
+    </section>
+
+    <section id="summary">
+        <h2>Summary</h2>
+        <p id="total-expense">Total Expense: $0</p>
+        <p id="remaining-budget">Remaining Budget: $0</p>
+        <button id="set-budget-btn">Set Budget</button>
+        <input type="number" id="budget-input" placeholder="Enter budget" style="display:none;">
+        <button id="save-budget-btn" style="display:none;">Save Budget</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Expense Tracker. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
